@@ -1,0 +1,39 @@
+.shadow{
+  box-shadow: 2px 0 6px rgba(0, 21, 41, .35);
+}
+.side-menu{
+  z-index: 10;
+  min-height: 100vh;
+  overflow-y: auto;
+  .logo{
+    position: relative;
+    height: 64px;
+    padding-left: 24px;
+    overflow: hidden;
+    line-height: 64px;
+    background-color: @layout-trigger-background;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    &.light{
+      background-color: #fff;
+      h1{
+        color: @primary-color;
+      }
+    }
+    h1{
+      display: inline-block;
+      margin: 0 0 0 12px;
+      color: @menu-dark-highlight-color;
+      font-size: 20px;
+      vertical-align: middle;
+    }
+    img{
+      width: 32px;
+      height: 32px;
+      vertical-align: middle;
+    }
+  }
+}
+.menu{
+  padding: 16px 0;
+}

@@ -1,0 +1,96 @@
+.week-mode{
+  overflow: hidden;
+  filter: invert(80%);
+}
+.beauty-scroll{
+  scrollbar-color: @primary-color @primary-2;
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+  position: relative;
+  &::-webkit-scrollbar{
+    width: 3px;
+    height: 1px;
+  }
+  &::-webkit-scrollbar-thumb{
+    background: @primary-color;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-track{
+    background: @primary-3;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+  }
+}
+.split-right{
+  &:not(:last-child){
+    border-right: 1px solid rgba(98, 98, 98, .2);
+  }
+}
+.disabled{
+  color: @disabled-color;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+/* 英文、中文强制换行 */
+::v-deep .ant-table-tbody td{
+  word-break: break-all;
+}
+/* 表格宽度小于800显示滚动条 */
+.ant-table-wrapper{
+  .ant-table-content{
+    overflow-y: auto;
+  }
+  .ant-table-body{
+    min-width: 800px;
+  }
+}
+/* 表格查询区域 */
+.table-page-search-wrapper{
+  .ant-form-inline{
+    .ant-form-item{
+      display: flex;
+      margin-right: 0;
+      margin-bottom: 24px;
+      .ant-form-item-control-wrapper{
+        display: inline-block;
+        flex: 1 1;
+        vertical-align: middle;
+      }
+      > .ant-form-item-label{
+        width: auto;
+        padding-right: 8px;
+        line-height: 32px;
+      }
+      .ant-form-item-control{
+        height: 32px;
+        line-height: 32px;
+      }
+    }
+  }
+  .table-page-search-submitButtons{
+    display: block;
+    margin-bottom: 24px;
+    white-space: nowrap;
+  }
+}
+.table-operator{
+  margin-bottom: 18px;
+  button{
+    margin-right: 8px;
+  }
+}
+/* 表格里状态提示按钮 */
+.status-active{
+  display: inline-block;
+  padding: 1px 12px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  word-break: keep-all;
+  background: @primary-color;
+  &.status-default{
+    color: #333;
+    background: #ccc;
+  }
+}

@@ -1,0 +1,15 @@
+- hosts: "{{ hostname }}"
+  remote_user: root
+  vars:
+    cms_root: /app/tomcat/cloud-admin-project/webapps/
+  tasks:
+    - name: "删除旧版本目录"
+      file:
+        state: absent
+        dest: "{{ cms_root }}/admin-web"
+        
+    
+    - name: "解压tar包"
+      unarchive:
+        src: "admin-web.tar"
+        dest: "{{ cms_root }}"

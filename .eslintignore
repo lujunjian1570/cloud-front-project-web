@@ -1,0 +1,7 @@
+build/*.js
+src/assets
+public
+dist
+admin-web
+/tests/unit/coverage/
+/tests/e2e/reports/

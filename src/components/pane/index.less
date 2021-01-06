@@ -1,0 +1,49 @@
+.card-container{
+  overflow: hidden;
+  ::v-deep .ant-tabs-bar{
+    padding: 0 20px;
+  }
+}
+.card-container > .ant-tabs-card > .ant-tabs-content{
+  height: 120px;
+  margin-top: -16px;
+}
+.card-container > .ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane{
+  background: #fff;
+  //padding: 16px;
+}
+.card-container > .ant-tabs-card > .ant-tabs-bar{
+  border-color: #fff;
+}
+.card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab{
+  background: transparent;
+  border-color: transparent;
+}
+.card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active{
+  background: #fff;
+  border-color: #fff;
+}
+/deep/ .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-nav-wrap{
+  padding: 0 10px;
+}
+.pane-cont{
+  display: flex;
+}
+.left-pane-cont{
+  width: 130px;
+}
+.right-pane-cont{
+  width: calc(100% - 130px);
+}
+@media screen and (max-width: 600px){
+  .pane-cont{
+    display: block;
+  }
+  .left-pane-cont{
+    width: 100%;
+    min-height: 40px;
+  }
+  .right-pane-cont{
+    width: 100%;
+  }
+}
